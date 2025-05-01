@@ -103,7 +103,8 @@ The following SQL queries were used to address specific questions:
 
 **Task 7: Find Total Rental Income by Category**:
 
-```sqlSelect category, SUM(Rental_price) as Total, COUNT(*)
+```sql
+Select category, SUM(Rental_price) as Total, COUNT(*)
 from pproject_Library.dbo.books
 join pproject_Library.dbo.issued_status
 	on books.isbn = issued_status.issued_book_isbn
@@ -124,7 +125,8 @@ where reg_date >= CURRENT_TIMESTAMP - 365
 
 **Task 9 : List Employees with Their Branch Manager's Name and their branch details**:
 
-```sqlSelect e1.*, e2.emp_id, e2.emp_name as Manager_name
+```sql
+Select e1.*, e2.emp_id, e2.emp_name as Manager_name
 from pproject_Library.dbo.employees as e1
 join pproject_Library.dbo.branch
 	on e1.branch_id = branch.branch_id
